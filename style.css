@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montagu Slab', serif;
+}
+
+body {
+    align-items: center;
+    background-color: #f8f9d2;
+    background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;;
+}
+
+.quiz-area {
+    width: 40%;
+}
+
+.title {
+    text-align: center;
+}
+
+.board {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    height: 10rem;
+    width: 10rem;
+    position: relative;
+    transition: all 2s ease-in;
+    transform-style: preserve-3d;
+}
+
+.front, .back {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex: 1 1 10rem;
+    margin-bottom: 5px;
+    justify-content: center;
+    background-color: #f9ea8f;
+    border-radius: 25px;
+    position: absolute;
+}
+
+.front {
+    background-image: linear-gradient(315deg, #f9ea8f 0%, #aff1da 74%);
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.back {
+    background-image: linear-gradient(315deg, #7a765f 0%, #aff1da 74%);
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+p {
+    align-self: center;
+    align-content: space-around;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
